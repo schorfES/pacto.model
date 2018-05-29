@@ -1,0 +1,43 @@
+{
+  "name": "pacto-model",
+  "version": "0.0.0-alpha",
+  "description": "A simple model/collection extension for pacto",
+  "main": "dist/pacto-model.umd.js",
+  "module": "dist/pacto-model.esm.js",
+  "keywords": [
+    "pacto",
+    "model",
+    "models",
+    "collection",
+    "mvc"
+  ],
+  "scripts": {
+    "validate": "make validate",
+    "tests": "make tests",
+    "coverage": "make coverage",
+    "docs": "make docs",
+    "build": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schorfES/pacto-model.git"
+  },
+  "author": "Norman Rusch",
+  "license": "MIT",
+  "dependencies": {
+    "pacto": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
+    "doctoc": "^1.3.1",
+    "eslint": "^4.18.1",
+    "eslint-plugin-jest": "^21.12.2",
+    "jest": "^22.4.2"
+  }
+}

@@ -1,0 +1,10 @@
+sudo: false
+language: node_js
+node_js:
+- 9
+install:
+- npm install
+script:
+- npm run tests
+- npm run coverage
+- npm run validate
