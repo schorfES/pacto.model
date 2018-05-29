@@ -30,7 +30,9 @@ npm install pacto-model --save
 
 ## Requirements
 
-TBD
+Pacto and Pacto Model is _dependency free_, but it requires latest browser features.
+For [Collection](#collection) or [Model](#model) you may need a polyfill for
+[Proxy](https://www.npmjs.com/package/proxy-polyfill).
 
 ## Documentation
 
