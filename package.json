@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "validate": "make validate",
-    "test": "make tests",
+    "test": "snyk test && make tests",
     "coverage": "make coverage",
     "docs": "make docs",
     "build": "make build"
@@ -40,6 +40,7 @@
     "eslint-plugin-jest": "^21.24.1",
     "jest": "^23.6.0",
     "rollup": "^0.66.5",
+    "snyk": "^1.103.0",
     "uglify-js": "^3.4.9"
   }
 }
