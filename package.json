@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "validate": "make validate",
-    "tests": "make tests",
+    "test": "make tests",
     "coverage": "make coverage",
     "docs": "make docs",
     "build": "make build"
