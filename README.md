@@ -5,7 +5,7 @@
 [![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto.model/branch/master/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto.model)
 [![Known Vulnerabilities](https://snyk.io/test/github/schorfES/pacto.model/badge.svg)](https://snyk.io/test/github/schorfES/pacto.model)
 
-A simple model/collection extension for pacto.
+A simple model/collection extension for [pacto](https://github.com/schorfES/pacto).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
