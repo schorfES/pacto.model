@@ -25,7 +25,7 @@ A simple model/collection extension for pacto.
 Pacto is available on [NPM](https://www.npmjs.com/package/pacto-model):
 
 ```bash
-npm install pacto-model --save
+npm install pacto.model --save
 ```
 
 ## Requirements
