@@ -1,8 +1,8 @@
 # Pacto-Model
 
-[![Build Status](https://travis-ci.org/schorfES/pacto-model.svg?branch=master)](https://travis-ci.org/schorfES/pacto-model)
-[![Coverage Status on Coveralls](https://coveralls.io/repos/github/schorfES/pacto-model/badge.svg?branch=master)](https://coveralls.io/github/schorfES/pacto-model?branch=master)
-[![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto-model/branch/master/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto-model)
+[![Build Status](https://travis-ci.org/schorfES/pacto.model.svg?branch=master)](https://travis-ci.org/schorfES/pacto.model)
+[![Coverage Status on Coveralls](https://coveralls.io/repos/github/schorfES/pacto.model/badge.svg?branch=master)](https://coveralls.io/github/schorfES/pacto.model?branch=master)
+[![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto.model/branch/master/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto.model)
 
 A simple model/collection extension for pacto.
 
@@ -22,7 +22,7 @@ A simple model/collection extension for pacto.
 
 ## Installation
 
-Pacto is available on [NPM](https://www.npmjs.com/package/pacto-model):
+Pacto is available on [NPM](https://www.npmjs.com/package/pacto.model):
 
 ```bash
 npm install pacto.model --save
@@ -43,7 +43,7 @@ dispatches a `'change'` event. All properties of a model instance are accessible
 through the `.props` property.
 
 ```javascript
-import {Model} from 'pacto-model';
+import {Model} from 'pacto.model';
 
 const data = {foo: 'bar'};
 const model = new Model(data);
@@ -57,7 +57,7 @@ these properties are not passed into the model, the model will use the
 predefined default values until the value will be set.
 
 ```javascript
-import {Model} from 'pacto-model';
+import {Model} from 'pacto.model';
 
 class MyModel extends Model {
 	get defaults() {
@@ -83,7 +83,7 @@ All items which are passed into the collection will be transformed into a
 getter of a Collection instance.
 
 ```javascript
-import {Collection, Model} from 'pacto-model';
+import {Collection, Model} from 'pacto.model';
 
 class MyModel extends Model {
 	get defaults() {

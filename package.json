@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/schorfES/pacto-model.git"
+    "url": "https://github.com/schorfES/pacto.model.git"
   },
   "author": "Norman Rusch",
   "license": "MIT",
