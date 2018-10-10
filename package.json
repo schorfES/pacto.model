@@ -1,6 +1,6 @@
 {
   "name": "pacto.model",
-  "version": "0.0.0-alpha",
+  "version": "0.1.0",
   "description": "A simple model/collection extension for pacto",
   "main": "dist/pacto.model.umd.js",
   "module": "dist/pacto.model.esm.js",
@@ -25,7 +25,7 @@
   "author": "Norman Rusch",
   "license": "MIT",
   "dependencies": {
-    "pacto": "^0.1.1"
+    "pacto": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
