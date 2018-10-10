@@ -23,7 +23,7 @@ A simple model/collection extension for [pacto](https://github.com/schorfES/pact
 
 ## Installation
 
-Pacto is available on [NPM](https://www.npmjs.com/package/pacto.model):
+Pacto.Model is available on [NPM](https://www.npmjs.com/package/pacto.model):
 
 ```bash
 npm install pacto.model --save
@@ -31,9 +31,9 @@ npm install pacto.model --save
 
 ## Requirements
 
-Pacto and Pacto Model is _dependency free_, but it requires latest browser features.
-For [Collection](#collection) or [Model](#model) you may need a polyfill for
-[Proxy](https://www.npmjs.com/package/proxy-polyfill).
+Pacto.Model only depends on Pacto which is _dependency free_, but it requires
+latest browser features. For [Collection](#collection) or [Model](#model) you
+may need a polyfill for [Proxy](https://www.npmjs.com/package/proxy-polyfill).
 
 ## Documentation
 
