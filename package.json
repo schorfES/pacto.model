@@ -43,6 +43,7 @@
     "jest": "^24.8.0",
     "rollup": "^0.66.6",
     "snyk": "^1.126.0",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.4.9",
+    "version-bump-prompt": "^5.0.1"
   }
 }
