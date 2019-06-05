@@ -29,17 +29,18 @@
     "pacto": "^0.2.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^8.2.6",
-    "babel-jest": "^22.4.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-jest": "^24.8.0",
     "codecov": "^3.1.0",
     "coveralls": "^3.0.2",
     "doctoc": "^1.4.0",
     "eslint": "^4.18.1",
     "eslint-plugin-jest": "^21.27.2",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "rollup": "^0.66.6",
     "snyk": "^1.126.0",
     "uglify-js": "^3.4.9"

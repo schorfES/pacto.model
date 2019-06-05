@@ -1,4 +1,4 @@
-const babel = require('babel-core');
+const babel = require('@babel/core');
 const fs = require('fs');
 const rollup = require('rollup');
 const uglifyjs = require('uglify-js');
@@ -28,7 +28,7 @@ const MODULE_ENTRY = './src/index.js';
 			filename: MODULE_ENTRY,
 			moduleId: MODULE_ID,
 			plugins: [
-				['transform-es2015-modules-umd', {
+				['@babel/plugin-transform-modules-umd', {
 					globals: {
 						'pacto/model': 'pacto.model'
 					},
@@ -48,7 +48,7 @@ const MODULE_ENTRY = './src/index.js';
 			filename: MODULE_ENTRY,
 			moduleId: MODULE_ID,
 			plugins: [
-				['transform-es2015-modules-umd', {
+				['@babel/plugin-transform-modules-umd', {
 					globals: {
 						'pacto': 'pacto'
 					},
