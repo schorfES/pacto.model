@@ -1,6 +1,6 @@
 {
   "name": "pacto.model",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple model/collection extension for pacto",
   "main": "dist/pacto.model.umd.js",
   "module": "dist/pacto.model.esm.js",
