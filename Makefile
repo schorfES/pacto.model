@@ -36,7 +36,6 @@ build:
 
 
 make release: validate tests build docs
-	node_modules/.bin/bump \
-		--commit "Release v%s" \
-		--tag "%s" \
-		--all
+	node_modules/.bin/np \
+		--no-yarn \
+		--tag
