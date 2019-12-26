@@ -26,7 +26,7 @@
   "author": "Norman Rusch",
   "license": "MIT",
   "dependencies": {
-    "pacto": "^0.2.1"
+    "pacto": "^0.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
