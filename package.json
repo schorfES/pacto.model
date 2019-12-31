@@ -25,7 +25,7 @@
   },
   "author": "Norman Rusch",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "pacto": "^0.4.3"
   },
   "devDependencies": {
@@ -42,6 +42,7 @@
     "eslint-plugin-jest": "^21.27.2",
     "jest": "^24.9.0",
     "np": "^5.2.1",
+    "pacto": "^0.4.3",
     "rollup": "^0.66.6",
     "snyk": "^1.126.0",
     "uglify-js": "^3.4.9"
