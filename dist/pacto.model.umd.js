@@ -19,7 +19,7 @@
   });
   _exports.Model = _exports.Collection = void 0;
 
-  function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+  function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
   function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -33,11 +33,15 @@
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+  function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
   function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
   function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -45,10 +49,10 @@
 
   var __refs = new WeakMap();
 
-  var Model =
-  /*#__PURE__*/
-  function (_EventEmitter) {
+  var Model = /*#__PURE__*/function (_EventEmitter) {
     _inherits(Model, _EventEmitter);
+
+    var _super = _createSuper(Model);
 
     function Model() {
       var _this;
@@ -57,7 +61,7 @@
 
       _classCallCheck(this, Model);
 
-      _this = _possibleConstructorReturn(this, _getPrototypeOf(Model).call(this));
+      _this = _super.call(this);
       props = _objectSpread({}, _this.defaults, {}, props);
       var handler = {
         set: function set(target, prop, value) {
@@ -100,10 +104,10 @@
 
   var __refs$1 = new WeakMap();
 
-  var Collection =
-  /*#__PURE__*/
-  function (_EventEmitter2) {
+  var Collection = /*#__PURE__*/function (_EventEmitter2) {
     _inherits(Collection, _EventEmitter2);
+
+    var _super2 = _createSuper(Collection);
 
     function Collection() {
       var _this2;
@@ -112,7 +116,7 @@
 
       _classCallCheck(this, Collection);
 
-      _this2 = _possibleConstructorReturn(this, _getPrototypeOf(Collection).call(this));
+      _this2 = _super2.call(this);
 
       var enshureIsModel = function enshureIsModel(model) {
         return model instanceof Model ? model : new _this2.Model(model);
