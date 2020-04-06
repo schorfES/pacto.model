@@ -2,7 +2,7 @@
   "name": "pacto.model",
   "version": "0.3.1",
   "description": "A simple model/collection extension for pacto",
-  "main": "dist/pacto.model.umd.js",
+  "main": "dist/pacto.model.cjs.js",
   "module": "dist/pacto.model.esm.js",
   "keywords": [
     "pacto",
@@ -26,25 +26,26 @@
   "author": "Norman Rusch",
   "license": "MIT",
   "peerDependencies": {
-    "pacto": "^0.4.3"
+    "pacto": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/plugin-transform-modules-umd": "^7.2.0",
-    "@babel/preset-env": "^7.4.5",
-    "babel-eslint": "^8.2.6",
-    "babel-jest": "^25.2.4",
-    "codecov": "^3.1.0",
-    "coveralls": "^3.0.2",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.2.6",
+    "codecov": "^3.6.5",
     "doctoc": "^1.4.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-jest": "^21.27.2",
-    "jest": "^25.2.4",
-    "np": "^5.2.1",
-    "pacto": "^0.4.3",
-    "rollup": "^0.66.6",
-    "snyk": "^1.126.0",
-    "uglify-js": "^3.4.9"
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.2.7",
+    "live-server": "^1.2.1",
+    "np": "^6.2.0",
+    "pacto": "^0.5.0",
+    "rollup": "^2.3.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "snyk": "^1.305.0"
   }
 }

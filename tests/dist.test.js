@@ -1,6 +1,5 @@
-import * as pactoModelESM from '../dist/pacto.model.esm';
-import * as pactoModelMIN from '../dist/pacto.model.min';
-import * as pactoModelUMD from '../dist/pacto.model.umd';
+import * as cjs from '../dist/pacto.model.cjs';
+import * as esm from '../dist/pacto.model.esm';
 
 
 const PACTO_CLASS_NAMES = [
@@ -11,15 +10,11 @@ const PACTO_CLASS_NAMES = [
 describe('The dist builds', () => {
 
 	test('ems build exposes all pacto classes', () => {
-		expect(Object.keys(pactoModelESM)).toEqual(PACTO_CLASS_NAMES);
+		expect(Object.keys(esm)).toEqual(PACTO_CLASS_NAMES);
 	});
 
-	test('umd build exposes all pacto classes', () => {
-		expect(Object.keys(pactoModelUMD)).toEqual(PACTO_CLASS_NAMES);
-	});
-
-	test('min build exposes all pacto classes', () => {
-		expect(Object.keys(pactoModelMIN)).toEqual(PACTO_CLASS_NAMES);
+	test('cjs build exposes all pacto classes', () => {
+		expect(Object.keys(cjs)).toEqual(PACTO_CLASS_NAMES);
 	});
 
 });
