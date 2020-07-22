@@ -41,7 +41,7 @@
     "doctoc": "^1.4.0",
     "eslint": "^6.8.0",
     "eslint-plugin-jest": "^23.8.2",
-    "jest": "^25.2.7",
+    "jest": "^26.1.0",
     "live-server": "^1.2.1",
     "np": "^6.2.0",
     "pacto": "^0.5.0",
