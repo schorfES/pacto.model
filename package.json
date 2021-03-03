@@ -43,7 +43,7 @@
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^26.1.0",
     "live-server": "^1.2.1",
-    "np": "^6.2.0",
+    "np": "^7.4.0",
     "pacto": "^0.5.0",
     "rollup": "^2.3.3",
     "rollup-plugin-babel": "^4.4.0",
