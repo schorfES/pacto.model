@@ -9,7 +9,6 @@ A simple model/collection extension for [pacto](https://github.com/schorfES/pact
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Installation](#installation)
 - [Requirements](#requirements)
 - [Documentation](#documentation)

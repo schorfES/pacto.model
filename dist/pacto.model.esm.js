@@ -1,6 +1,6 @@
 import { EventEmitter } from 'pacto';
 
-const __refs = new WeakMap();
+const __refs$1 = new WeakMap();
 
 
 class Model extends EventEmitter {
@@ -25,7 +25,7 @@ class Model extends EventEmitter {
 			proxy = new Proxy(props, handler)
 		;
 
-		__refs.set(this, proxy);
+		__refs$1.set(this, proxy);
 	}
 
 	get defaults() {
@@ -33,12 +33,12 @@ class Model extends EventEmitter {
 	}
 
 	get props() {
-		return __refs.get(this);
+		return __refs$1.get(this);
 	}
 
 }
 
-const __refs$1 = new WeakMap();
+const __refs = new WeakMap();
 
 
 class Collection extends EventEmitter {
@@ -102,7 +102,7 @@ class Collection extends EventEmitter {
 			proxy = new Proxy(models.map(enshureIsModel), handler)
 		;
 
-		__refs$1.set(this, proxy);
+		__refs.set(this, proxy);
 	}
 
 	get Model() {
@@ -110,7 +110,7 @@ class Collection extends EventEmitter {
 	}
 
 	get models() {
-		return __refs$1.get(this);
+		return __refs.get(this);
 	}
 
 }

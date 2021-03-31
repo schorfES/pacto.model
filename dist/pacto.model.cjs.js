@@ -112,7 +112,7 @@ function _isNativeReflectConstruct() {
   if (typeof Proxy === "function") return true;
 
   try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
   } catch (e) {
     return false;
@@ -136,11 +136,13 @@ function _possibleConstructorReturn(self, call) {
 }
 
 function _createSuper(Derived) {
-  return function () {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
     var Super = _getPrototypeOf(Derived),
         result;
 
-    if (_isNativeReflectConstruct()) {
+    if (hasNativeReflectConstruct) {
       var NewTarget = _getPrototypeOf(this).constructor;
 
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -152,7 +154,7 @@ function _createSuper(Derived) {
   };
 }
 
-var __refs = new WeakMap();
+var __refs$1 = new WeakMap();
 
 var Model = /*#__PURE__*/function (_EventEmitter) {
   _inherits(Model, _EventEmitter);
@@ -167,7 +169,7 @@ var Model = /*#__PURE__*/function (_EventEmitter) {
     _classCallCheck(this, Model);
 
     _this = _super.call(this);
-    props = _objectSpread2({}, _this.defaults, {}, props);
+    props = _objectSpread2(_objectSpread2({}, _this.defaults), props);
     var handler = {
       set: function set(target, prop, value) {
         var isChanged = target[prop] !== value;
@@ -185,7 +187,7 @@ var Model = /*#__PURE__*/function (_EventEmitter) {
     },
         proxy = new Proxy(props, handler);
 
-    __refs.set(_assertThisInitialized(_this), proxy);
+    __refs$1.set(_assertThisInitialized(_this), proxy);
 
     return _this;
   }
@@ -198,14 +200,14 @@ var Model = /*#__PURE__*/function (_EventEmitter) {
   }, {
     key: "props",
     get: function get() {
-      return __refs.get(this);
+      return __refs$1.get(this);
     }
   }]);
 
   return Model;
 }(pacto.EventEmitter);
 
-var __refs$1 = new WeakMap();
+var __refs = new WeakMap();
 
 var Collection = /*#__PURE__*/function (_EventEmitter) {
   _inherits(Collection, _EventEmitter);
@@ -281,7 +283,7 @@ var Collection = /*#__PURE__*/function (_EventEmitter) {
     },
         proxy = new Proxy(models.map(enshureIsModel), handler);
 
-    __refs$1.set(_assertThisInitialized(_this), proxy);
+    __refs.set(_assertThisInitialized(_this), proxy);
 
     return _this;
   }
@@ -294,7 +296,7 @@ var Collection = /*#__PURE__*/function (_EventEmitter) {
   }, {
     key: "models",
     get: function get() {
-      return __refs$1.get(this);
+      return __refs.get(this);
     }
   }]);
 
