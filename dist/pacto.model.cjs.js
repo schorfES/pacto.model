@@ -4,28 +4,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var pacto = require('pacto');
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -75,168 +53,56 @@ function _objectSpread2(target) {
   return target;
 }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
+const __refs$1 = new WeakMap();
 
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (typeof call === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = _isNativeReflectConstruct();
-
-  return function _createSuperInternal() {
-    var Super = _getPrototypeOf(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = _getPrototypeOf(this).constructor;
-
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return _possibleConstructorReturn(this, result);
-  };
-}
-
-var __refs$1 = new WeakMap();
-
-var Model = /*#__PURE__*/function (_EventEmitter) {
-  _inherits(Model, _EventEmitter);
-
-  var _super = _createSuper(Model);
-
-  function Model() {
-    var _this;
-
-    var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    _classCallCheck(this, Model);
-
-    _this = _super.call(this);
-    props = _objectSpread2(_objectSpread2({}, _this.defaults), props);
-    var handler = {
-      set: function set(target, prop, value) {
-        var isChanged = target[prop] !== value;
+class Model extends pacto.EventEmitter {
+  constructor(props = {}) {
+    super();
+    props = _objectSpread2(_objectSpread2({}, this.defaults), props);
+    const handler = {
+      set: (target, prop, value) => {
+        const isChanged = target[prop] !== value;
         target[prop] = value;
 
         if (isChanged) {
-          _this.trigger('change', {
-            prop: prop,
-            value: value
+          this.trigger('change', {
+            prop,
+            value
           });
         }
 
         return true;
       }
     },
-        proxy = new Proxy(props, handler);
+          proxy = new Proxy(props, handler);
 
-    __refs$1.set(_assertThisInitialized(_this), proxy);
-
-    return _this;
+    __refs$1.set(this, proxy);
   }
 
-  _createClass(Model, [{
-    key: "defaults",
-    get: function get() {
-      return null;
-    }
-  }, {
-    key: "props",
-    get: function get() {
-      return __refs$1.get(this);
-    }
-  }]);
+  get defaults() {
+    return null;
+  }
 
-  return Model;
-}(pacto.EventEmitter);
+  get props() {
+    return __refs$1.get(this);
+  }
 
-var __refs = new WeakMap();
+}
 
-var Collection = /*#__PURE__*/function (_EventEmitter) {
-  _inherits(Collection, _EventEmitter);
+const __refs = new WeakMap();
 
-  var _super = _createSuper(Collection);
+class Collection extends pacto.EventEmitter {
+  constructor(models = []) {
+    super();
 
-  function Collection() {
-    var _this;
-
-    var models = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-    _classCallCheck(this, Collection);
-
-    _this = _super.call(this);
-
-    var enshureIsModel = function enshureIsModel(model) {
-      return model instanceof Model ? model : new _this.Model(model);
-    },
-        handler = {
-      get: function get(target, property) {
-        var method = target[property];
+    const enshureIsModel = model => model instanceof Model ? model : new this.Model(model),
+          handler = {
+      get: (target, property) => {
+        const method = target[property];
 
         if (typeof method === 'function') {
-          return function () {
-            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-              args[_key] = arguments[_key];
-            }
-
-            var isChanged = false,
+          return (...args) => {
+            let isChanged = false,
                 result;
 
             switch (property) {
@@ -260,16 +126,14 @@ var Collection = /*#__PURE__*/function (_EventEmitter) {
 
               case 'splice':
                 isChanged = true;
-                args = args.map(function (arg, index) {
-                  return index > 1 ? enshureIsModel(arg) : arg;
-                });
+                args = args.map((arg, index) => index > 1 ? enshureIsModel(arg) : arg);
                 break;
             }
 
             result = method.apply(target, args);
 
             if (isChanged) {
-              _this.trigger('change', {
+              this.trigger('change', {
                 method: property
               });
             }
@@ -281,27 +145,20 @@ var Collection = /*#__PURE__*/function (_EventEmitter) {
         return method;
       }
     },
-        proxy = new Proxy(models.map(enshureIsModel), handler);
+          proxy = new Proxy(models.map(enshureIsModel), handler);
 
-    __refs.set(_assertThisInitialized(_this), proxy);
-
-    return _this;
+    __refs.set(this, proxy);
   }
 
-  _createClass(Collection, [{
-    key: "Model",
-    get: function get() {
-      return Model;
-    }
-  }, {
-    key: "models",
-    get: function get() {
-      return __refs.get(this);
-    }
-  }]);
+  get Model() {
+    return Model;
+  }
 
-  return Collection;
-}(pacto.EventEmitter);
+  get models() {
+    return __refs.get(this);
+  }
+
+}
 
 exports.Collection = Collection;
 exports.Model = Model;
