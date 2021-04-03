@@ -4,7 +4,6 @@
   "description": "A simple model/collection extension for pacto",
   "main": "dist/pacto.model.cjs.js",
   "module": "dist/pacto.model.esm.js",
-  "browser": "dist/pacto.model.min.js",
   "unpkg": "dist/pacto.model.min.js",
   "keywords": [
     "pacto",
