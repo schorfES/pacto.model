@@ -7,13 +7,13 @@ docs:
 
 
 validate:
-	eslint \
+	node_modules/.bin/eslint \
 		. \
 		--ext .js
 
 
 tests:
-	jest \
+	node_modules/.bin/jest \
 		src \
 		--coverage \
 		--verbose
