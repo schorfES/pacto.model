@@ -38,11 +38,10 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: make tests coverage
-        env:
-          CI: true
+        run: make tests
+
+      - name: Run coverage report
+        uses: codecov/codecov-action@v2
 
       - name: Run validations
         run: make validate
-        env:
-          CI: true
