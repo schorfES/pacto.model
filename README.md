@@ -1,6 +1,6 @@
 # Pacto.Model
 
-[![Build Status](https://travis-ci.org/schorfES/pacto.model.svg?branch=main)](https://travis-ci.org/schorfES/pacto.model)
+[![CI Status](https://github.com/schorfES/pacto.model/actions/workflows/ci.yml/badge.svg)](https://github.com/schorfES/pacto.model/actions)
 [![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto.model/branch/main/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto.model)
 [![Known Vulnerabilities](https://snyk.io/test/github/schorfES/pacto.model/badge.svg)](https://snyk.io/test/github/schorfES/pacto.model)
 
