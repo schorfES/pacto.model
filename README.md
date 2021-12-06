@@ -1,7 +1,7 @@
 # Pacto.Model
 
-[![Build Status](https://travis-ci.org/schorfES/pacto.model.svg?branch=master)](https://travis-ci.org/schorfES/pacto.model)
-[![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto.model/branch/master/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto.model)
+[![Build Status](https://travis-ci.org/schorfES/pacto.model.svg?branch=main)](https://travis-ci.org/schorfES/pacto.model)
+[![Coverage Status on Codecov](https://codecov.io/gh/schorfES/pacto.model/branch/main/graph/badge.svg)](https://codecov.io/gh/schorfES/pacto.model)
 [![Known Vulnerabilities](https://snyk.io/test/github/schorfES/pacto.model/badge.svg)](https://snyk.io/test/github/schorfES/pacto.model)
 
 A simple model/collection extension for [pacto](https://github.com/schorfES/pacto).
