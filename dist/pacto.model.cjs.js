@@ -60,7 +60,8 @@ function _defineProperty(obj, key, value) {
 const __refs$1 = new WeakMap();
 
 class Model extends pacto.EventEmitter {
-  constructor(props = {}) {
+  constructor() {
+    let props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     super();
     props = _objectSpread2(_objectSpread2({}, this.defaults), props);
     const handler = {
@@ -96,8 +97,12 @@ class Model extends pacto.EventEmitter {
 const __refs = new WeakMap();
 
 class Collection extends pacto.EventEmitter {
-  constructor(models = []) {
+  constructor() {
+    var _this;
+
+    let models = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
     super();
+    _this = this;
 
     const enshureIsModel = model => model instanceof Model ? model : new this.Model(model),
           handler = {
@@ -105,7 +110,11 @@ class Collection extends pacto.EventEmitter {
         const method = target[property];
 
         if (typeof method === 'function') {
-          return (...args) => {
+          return function () {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+
             let isChanged = false,
                 result;
 
@@ -137,7 +146,7 @@ class Collection extends pacto.EventEmitter {
             result = method.apply(target, args);
 
             if (isChanged) {
-              this.trigger('change', {
+              _this.trigger('change', {
                 method: property
               });
             }
