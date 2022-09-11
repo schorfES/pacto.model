@@ -37,7 +37,7 @@
     "babel-jest": "^28.1.0",
     "doctoc": "^2.0.0",
     "eslint": "^8.4.0",
-    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-jest": "^27.0.4",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "live-server": "^1.2.1",
