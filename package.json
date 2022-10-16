@@ -39,7 +39,7 @@
     "eslint": "^8.4.0",
     "eslint-plugin-jest": "^27.0.4",
     "jest": "^29.0.3",
-    "jest-environment-jsdom": "^28.1.1",
+    "jest-environment-jsdom": "^29.2.0",
     "live-server": "^1.2.1",
     "np": "^7.4.0",
     "pacto": "^0.7.2",
