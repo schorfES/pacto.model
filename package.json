@@ -43,7 +43,7 @@
     "live-server": "^1.2.1",
     "np": "^10.0.5",
     "pacto": "^0.7.2",
-    "rollup": "^2.3.3",
+    "rollup": "^4.40.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^7.0.2"
   }
